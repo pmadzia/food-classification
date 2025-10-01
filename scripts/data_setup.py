@@ -14,8 +14,8 @@ def create_dataloaders(
         test_dir: str,
         transform: transforms.Compose,
         batch_size: int,
-        num_workers: int=NUM_WORKERS
-):
+        num_workers: int = NUM_WORKERS
+) -> tuple[DataLoader, DataLoader, list[str]]:
     """Creates training and testing DataLoaders.
 
     Takes in a training directory and testing directory path and turns
