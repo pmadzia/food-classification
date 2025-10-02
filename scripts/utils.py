@@ -22,7 +22,7 @@ def accuracy_fn(
     return acc
 
 def save_model(
-        model: torch.nn.Model,
+        model: torch.nn.Module,
         model_name: str,
         target_dir: str = 'models'
 ) -> None:
