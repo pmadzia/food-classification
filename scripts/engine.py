@@ -52,7 +52,7 @@ def train_step(
         # 5. Optimizer step
         optimizer.step()
 
-    # Adjust metrics to get average loss and accuracy 
+    # Adjust metrics to get average loss and accuracy
     train_loss /= len(data_loader)
     train_acc /= len(data_loader)
     
@@ -134,7 +134,7 @@ def train(
                'test_loss': [],
                'test_acc': []
     }
-    
+
     # Loop through training and testing steps for a number of epochs
     for epoch in tqdm(range(epochs)):
         train_loss, train_acc = train_step(model=model,
