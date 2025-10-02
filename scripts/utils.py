@@ -23,8 +23,8 @@ def accuracy_fn(
 
 def save_model(
         model: torch.nn.Model,
-        target_dir: str,
-        model_name: str
+        model_name: str,
+        target_dir: str = 'models'
 ) -> None:
     """Saves a Pytorch model to a target directory.
 
