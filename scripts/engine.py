@@ -108,7 +108,8 @@ def train(
         optimizer: torch.optim.Optimizer,
         loss_fn: torch.nn.Module,
         accuracy_fn: callable,
-        epochs: int
+        epochs: int,
+        device: torch.device
 ) -> dict[str, list[float]]:
     """Train and evaluate a PyTorch model over multiple epochs.
 
@@ -125,6 +126,7 @@ def train(
         accuracy_fn: Function to calculate accuracy. 
             Should accept `y_true` (labels) and `y_pred` (predicted labels).
         epochs: Number of epochs (full passes through the training dataset).
+        device: Target device to run computations on (e.g., 'cpu' or 'cuda').
 
     Returns:
         A dictionary containing per-epoch metrics.
@@ -141,12 +143,14 @@ def train(
                                            data_loader=train_dataloader,
                                            loss_fn=loss_fn,
                                            optimizer=optimizer,
-                                           accuracy_fn=accuracy_fn)
+                                           accuracy_fn=accuracy_fn,
+                                           device=device)
         
         test_loss, test_acc = test_step(model=model,
                                         data_loader=test_dataloader,
                                         loss_fn=loss_fn,
-                                        accuracy_fn=accuracy_fn)
+                                        accuracy_fn=accuracy_fn,
+                                        device=device)
         
         print(
             f'Epoch: {epoch+1} | '
