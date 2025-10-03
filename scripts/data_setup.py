@@ -56,7 +56,4 @@ def create_dataloaders(
         pin_memory=pin_memory
     )
 
-    print("CUDA available:", torch.cuda.is_available())
-    print("pin_memory:", pin_memory)
-
     return train_dataloader, test_dataloader, class_names
