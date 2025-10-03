@@ -4,6 +4,7 @@ image classification data.
 """
 import os
 
+import torch
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
@@ -25,7 +26,7 @@ def create_dataloaders(
         train_dir: Path to training directory.
         test_dir: Path to testing directory.
         transforms: torchvision transforms to perform on training and testing data.
-        batch_size: Number of sampels per batch in each of the DataLoaders.
+        batch_size: Number of samples per batch in each of the DataLoaders.
         num_workers: An integer for number of workers per DataLoader.
     
     Returns:
@@ -37,12 +38,14 @@ def create_dataloaders(
 
     class_names = train_data.classes
 
+    pin_memory = torch.cuda.is_available()
+
     train_dataloader = DataLoader(
         dataset=train_data,
         batch_size=batch_size,
         shuffle=True,
         num_workers=num_workers,
-        pin_memory=True
+        pin_memory=pin_memory
     )
 
     test_dataloader = DataLoader(
@@ -50,7 +53,10 @@ def create_dataloaders(
         batch_size=batch_size,
         shuffle=False,
         num_workers=num_workers,
-        pin_memory=True
+        pin_memory=pin_memory
     )
+
+    print("CUDA available:", torch.cuda.is_available())
+    print("pin_memory:", pin_memory)
 
     return train_dataloader, test_dataloader, class_names
