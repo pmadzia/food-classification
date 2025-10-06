@@ -31,9 +31,9 @@ def save_model(
 
     Args:
         model: A pytorch model to save.
-        target_dir: A directory in which model will be save.
         model_name: A filename for the saved model.
             Should include '.pth' or '.pt' as the file extension.
+        target_dir: A directory in which model will be save.
     """
     target_dir_path = Path(target_dir)
     target_dir_path.mkdir(parents=True,
