@@ -30,9 +30,9 @@ A deep learning project for food image classification using the Food-101 dataset
 ## Quick start
 
 Install all required packages:
-``bash
+```sh
 pip install -r requirements.txt
-``
+```
 
 ## Training a model
 
