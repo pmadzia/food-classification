@@ -1,13 +1,13 @@
 # Food Classification Project
 
-A deep learning project for food image classification using the Food-101 dataset. This repository explores various CNN architectures, from custom TinyVGG models to transfer learning with EfficientNet variants.
+A deep learning project for food image classification using the Food-101 dataset. This repository explores different CNN architectures, from custom TinyVGG models to transfer learning with EfficientNet variants.
 
 ## Project Overview
 
 - Custom dataset creation from Food-101
 - Data exploration and visualization
 - Model implementation and training
-- Data augmentation techniques
+- Data augmentation
 - Transfer learning
 - Experiment tracking
 
@@ -24,8 +24,8 @@ A deep learning project for food image classification using the Food-101 dataset
 - Performance comparison
 
 **3. Food classification with transfer learning and experiment tracking**
-- Training modify EfficientNetB0 and EfficientNetV2-S
-- Models comparison
+- Fine-tuned EfficientNetB0 and EfficientNetV2-S models
+- Compared model performance across different configurations
 
 ## Quick start
 
