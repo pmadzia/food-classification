@@ -37,7 +37,9 @@ pip install -r requirements.txt
 ## Training a model
 
 Run the training script in main directory for basic TinyVGG model:
-<pre> ```bash python train.py ``` </pre>
+```sh
+python train.py
+```
 Adjust hyperparameters in train.py for diffrent results or explor the notebooks step-by-step for diffrent implementation.
 
 ## Technologies
