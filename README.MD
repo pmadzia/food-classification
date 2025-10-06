@@ -13,17 +13,17 @@ A deep learning project for food image classification using the Food-101 dataset
 
 ## Notebooks
 
-1. Custom dataset
+**1. Custom dataset**
 - Subset selection from Food-101 dataset
 - Train/test split
 
-2. Food classification with TinyVGG
+**2. Food classification with TinyVGG**
 - Custom CNN architecture implementation
 - Baseline training without augmentation
 - Enhanced training with data augmentation
 - Performance comparison
 
-3. Food classification with transfer learning and experiment tracking
+**3. Food classification with transfer learning and experiment tracking**
 - Training modify EfficientNetB0 and EfficientNetV2-S
 - Models comparison
 
@@ -44,13 +44,13 @@ Adjust hyperparameters in train.py for diffrent results or explor the notebooks 
 
 ## Technologies
 
-- PyTorch 2.8.0: Deep learning framework
-- torchvision 0.23.0: Pre-trained models and transforms
-- NumPy 2.3.3 & Pandas 2.3.3: Data manipulation
-- Matplotlib 3.10.6: Visualization
-- torchinfo 1.8.0: Model architecture summaries
-- tqdm 4.67.1: Progress bars
-- TensorBoard 2.20.0: Experiment tracking and visualization
+- **PyTorch**: Deep learning framework
+- **torchvision**: Pre-trained models and transforms
+- **NumPy& Pandas**: Data manipulation
+- **Matplotlib**: Visualization
+- **torchinfo**: Model architecture summaries
+- **tqdm**: Progress bars
+- **TensorBoard**: Experiment tracking and visualization
 
 ## Results
 
@@ -60,9 +60,11 @@ Adjust hyperparameters in train.py for diffrent results or explor the notebooks 
 
 ## Citation
 
+```bibtex
 @inproceedings{bossard14,
   title = {Food-101 -- Mining Discriminative Components with Random Forests},
   author = {Bossard, Lukas and Guillaumin, Matthieu and Van Gool, Luc},
   booktitle = {European Conference on Computer Vision},
   year = {2014}
 }
+```
